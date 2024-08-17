@@ -1,0 +1,52 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class Swing {
+    Swing(){
+        JFrame f1 = new JFrame("Register form");
+        JButton b1 = new JButton("Login");
+        b1.setBounds(600,250,100,20);
+
+        JLabel l1= new JLabel("Email");
+        l1.setBounds(400,180,200,20);
+        JTextField t2 = new JTextField("Enter the Email id");
+        t2.setBounds(500,180,200,20);
+
+        JLabel l2 = new JLabel("password");
+        l2.setBounds(400,200,200,20);
+        JTextField t3 = new JTextField("enter the Password");
+        t3.setBounds(500,200,200,20);
+
+        JLabel l3 = new JLabel("Sign in");
+        l3.setBounds(600,140,200,20);
+        JTextArea t1 = new JTextArea(" enter the text");
+
+
+        ActionListener s = new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(t2.getText());
+                System.out.println(t3.getText());
+
+            }
+        };
+        b1.addActionListener(s);
+
+        f1.add(t1);
+        f1.add(t3);
+        f1.add(l2);
+        f1.add(t2);
+        f1.add(l1);
+        f1.add(l3);
+        f1.add(b1);
+        f1.setLayout(null);
+        f1.setVisible(true);
+        f1.setSize(50,50);
+
+
+    }
+    public static void main(String[] args){
+        new Swing();
+
+    }
+}
