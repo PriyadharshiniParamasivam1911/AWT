@@ -1,0 +1,57 @@
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+public class AWT {
+    AWT(){
+        Frame f1 = new Frame("Register form");
+        Button b1 = new Button("Login");
+        b1.setBounds(600,250,100,20);
+
+        Label l1= new Label("Email");
+        l1.setBounds(400,180,200,20);
+        TextField t2 = new TextField("Enter the Email id");
+        t2.setBounds(500,180,200,20);
+
+        Label l2 = new Label("password");
+        l2.setBounds(400,200,200,20);
+        TextField t3 = new TextField("enter the Password");
+        t3.setBounds(500,200,200,20);
+
+        Label l3 = new Label("Sign in");
+        l3.setBounds(600,140,200,20);
+        TextArea t1 = new TextArea(" enter the text");
+        Checkbox c1 = new Checkbox ("Age ");
+        Choice c2 = new Choice();
+        c2.add("erode");
+        c2.add("coimbatore");
+        c2.add("chennai");
+
+        ActionListener s = new ActionListener() {
+
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(t2.getText());
+                System.out.println(t3.getText());
+
+            }
+        };
+        b1.addActionListener(s);
+        f1.add(c2);
+        f1.add(c1);
+        f1.add(t1);
+        f1.add(t3);
+        f1.add(l2);
+        f1.add(t2);
+        f1.add(l1);
+        f1.add(l3);
+        f1.add(b1);
+        f1.setLayout(null);
+        f1.setVisible(true);
+        f1.setSize(50,50);
+
+
+    }
+    public static void main(String[] args){
+        new AWT();
+
+    }
+}
